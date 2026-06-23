@@ -23,7 +23,7 @@ export function Footer() {
       <div style={{ marginTop: '12px', paddingTop: '12px', borderTop: '1px solid rgba(255,255,255,0.1)', display: 'flex', justifyContent: 'space-between', fontSize: '11px', flexWrap: 'wrap', gap: 8 }}>
         <span>© 2026 Servicio Nacional de Aduanas. Todos los derechos reservados.</span>
         <span style={{ backgroundColor: 'rgba(255,255,255,0.15)', padding: '2px 10px', borderRadius: '4px', color: C.white, fontWeight: 700 }}>
-          Prototipo v2.0.1 · EV3
+          Prototipo v2.0.2 · EV3
         </span>
       </div>
     </footer>

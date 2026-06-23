@@ -69,7 +69,7 @@ export function AdminDashboard({ navigate, currentUser, logout }: NavProps) {
         </div>
 
         {/* Summary */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px', marginBottom: '28px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '28px' }}>
           {SUMMARY.map(card => {
             const Icon = card.icon;
             return (
@@ -159,7 +159,7 @@ export function AdminDashboard({ navigate, currentUser, logout }: NavProps) {
             {activeTab === 'roles' && (
               <div>
                 <div style={{ fontSize: '15px', fontWeight: 700, color: C.tertiary, marginBottom: '16px' }}>Permisos por rol</div>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px' }}>
                   {Object.entries(PERMISOS).map(([rol, perms]) => (
                     <div key={rol} style={{ border: `1px solid ${C.neutral}`, borderRadius: '10px', overflow: 'hidden' }}>
                       <div style={{ backgroundColor: C.tertiary, color: C.white, padding: '12px 16px', fontSize: '13px', fontWeight: 700 }}>{rol}</div>
@@ -213,7 +213,7 @@ export function AdminDashboard({ navigate, currentUser, logout }: NavProps) {
         </div>
 
         {/* Config shortcuts */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '16px', marginTop: '20px' }}>
           {[
             { icon: Settings, label: 'Parámetros del sistema', desc: 'Configurar parámetros generales y operacionales', color: C.grayA },
             { icon: Globe, label: 'Integraciones externas', desc: 'Estado y configuración de SAG, PDI y Aduana Limítrofe', color: C.primary, action: () => navigate('sistemas-externos') },

@@ -22,7 +22,7 @@ export function Header({ navigate, currentUser, logout, breadcrumbs }: HeaderPro
           🇨🇱 Gobierno de Chile — Servicio Nacional de Aduanas
         </span>
         <span style={{ fontSize: '11px', backgroundColor: 'rgba(255,255,255,0.25)', padding: '1px 8px', borderRadius: '4px', color: C.white, fontWeight: 700 }}>
-          Prototipo v2.0.1
+          Prototipo v2.0.2
         </span>
       </div>
 

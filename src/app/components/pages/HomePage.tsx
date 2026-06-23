@@ -61,7 +61,7 @@ export function HomePage({ navigate, currentUser, logout }: NavProps) {
             </button>
           </div>
           <div style={{ position: 'absolute', bottom: 16, right: 20, backgroundColor: 'rgba(0,0,0,0.35)', border: '1px solid rgba(255,255,255,0.3)', borderRadius: 6, padding: '3px 10px', fontSize: 11, fontWeight: 700, color: C.white }}>
-            Prototipo v2.0.1
+            Prototipo v2.0.2
           </div>
         </div>
       </section>

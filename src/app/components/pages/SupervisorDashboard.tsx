@@ -85,7 +85,7 @@ export function SupervisorDashboard({ navigate, currentUser, logout }: NavProps)
         </div>
 
         {/* Summary cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px', marginBottom: '28px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '28px' }}>
           {SUMMARY.map(card => {
             const Icon = card.icon;
             return (

@@ -47,7 +47,7 @@ export function OperadorDashboard({ navigate, currentUser, logout }: NavProps) {
         </div>
 
         {/* Summary cards */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '16px', marginBottom: '28px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '16px', marginBottom: '28px' }}>
           {SUMMARY_CARDS.map(card => {
             const Icon = card.icon;
             return (
@@ -124,7 +124,7 @@ export function OperadorDashboard({ navigate, currentUser, logout }: NavProps) {
         </div>
 
         {/* Quick actions */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '16px', marginTop: '20px' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px', marginTop: '20px' }}>
           {[
             { label: 'Validaciones externas pendientes', desc: 'SAG · PDI · Aduana Limítrofe', action: () => navigate('sistemas-externos'), color: C.primary },
             { label: 'Gestionar alertas abiertas', desc: '4 alertas requieren atención', action: () => navigate('alertas'), color: '#dc2626' },

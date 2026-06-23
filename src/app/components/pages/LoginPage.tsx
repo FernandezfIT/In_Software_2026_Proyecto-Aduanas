@@ -41,7 +41,7 @@ export function LoginPage({ navigate, onLogin }: LoginPageProps) {
     <div style={{ minHeight: '100vh', backgroundColor: C.tertiary, display: 'flex', flexDirection: 'column' }}>
       <div style={{ backgroundColor: C.primary, padding: '4px 24px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <span style={{ fontSize: '11px', color: 'rgba(255,255,255,0.9)' }}>🇨🇱 Gobierno de Chile — Servicio Nacional de Aduanas</span>
-        <span style={{ fontSize: '11px', backgroundColor: 'rgba(255,255,255,0.2)', padding: '1px 8px', borderRadius: '4px', color: C.white, fontWeight: 700 }}>Prototipo v2.0.1</span>
+        <span style={{ fontSize: '11px', backgroundColor: 'rgba(255,255,255,0.2)', padding: '1px 8px', borderRadius: '4px', color: C.white, fontWeight: 700 }}>Prototipo v2.0.2</span>
       </div>
 
       <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '32px 24px' }}>
