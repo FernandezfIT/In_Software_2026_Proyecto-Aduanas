@@ -1,0 +1,585 @@
+# Prompt Figma v1.0 - Prototipo Aduana Chile/Argentina
+
+## Sistema de Gestión de Control Aduanero Fronterizo Los Libertadores
+
+Crea un prototipo navegable en Figma para una plataforma web institucional llamada:
+
+**“SISTEMA DE GESTIÓN DE CONTROL ADUANERO FRONTERIZO LOS LIBERTADORES”**
+
+El sistema corresponde a una plataforma interna de apoyo al control aduanero fronterizo Chile/Argentina, basada en el caso de estudio de Aduana Chile trabajado en EV2. El prototipo debe representar la versión 1.0 del sistema.
+
+Usar como fuentes visuales y de contenido las siguientes referencias:
+
+1. Framework visual del Gobierno de Chile:  
+https://framework.digital.gob.cl/colors.html
+
+2. Página oficial de referencia del Paso Fronterizo Los Libertadores:  
+https://www.aduana.cl/paso-fronterizo-los-libertadores/aduana/2007-02-28/122413.html
+
+## Estilo visual obligatorio
+
+- Diseño institucional, sobrio, moderno y compatible con plataformas estatales chilenas.
+- Usar la paleta del Framework Kit Gobierno:
+  - Primary: `#006FB3`
+  - Secondary: `#FE6565`
+  - Tertiary: `#0A132D`
+  - Accent: `#A8B7C7`
+  - Neutral: `#EEEEEE`
+  - Gray A: `#4A4A4A`
+  - Gray B: `#8A8A8A`
+  - Black: `#111111`
+  - White: `#FFFFFF`
+- Usar tarjetas, botones, formularios, alertas, tags, navegación superior, breadcrumbs y footer siguiendo estética de Gobierno Digital.
+- Usar íconos institucionales relacionados con: aduana, usuario, documento, vehículo, alerta, reportes, integración externa, seguridad, frontera y validación.
+- Mantener buena legibilidad, contraste, jerarquía visual y orden.
+- Crear diseño desktop web, con estructura responsive sugerida.
+- Incluir una etiqueta visible en el header o footer: **“Prototipo v1.0”**.
+
+## Objetivo funcional del prototipo
+
+Representar una plataforma donde distintos roles de Aduana puedan iniciar sesión, cargar su perfil y acceder a funcionalidades según permisos. El flujo debe estar basado en el diagrama de casos de uso y el diagrama de actividades de la EV2.
+
+## Roles obligatorios
+
+### 1. Operador Aduanero
+- Correo: `operador@aduanachile.cl`
+- Clave: `12345`
+
+### 2. Supervisor Aduanero
+- Correo: `supervisor@aduanachile.cl`
+- Clave: `12345`
+
+### 3. Administrador del Sistema
+- Correo: `administrador@aduanachile.cl`
+- Clave: `12345`
+
+## Actores externos obligatorios
+
+- Sistema SAG.
+- Sistema PDI.
+- Aduana Limítrofe Argentina.
+
+## Casos de uso que deben aparecer representados
+
+- CU-01: Iniciar sesión y cargar perfil.
+- CU-02: Registrar / consultar expediente de viajero.
+- CU-03: Validar documentación de menor de edad.
+- CU-04: Registrar y validar vehículo motorizado.
+- CU-05: Ejecutar validaciones externas de control.
+- CU-06: Generar reportes operativos y estadísticos.
+- RF09: Gestionar alertas y observaciones.
+- RF10: Reportes operativos y estadísticos.
+
+---
+
+# Pantallas principales requeridas
+
+## 1. Pantalla Home / Página principal
+
+Debe funcionar como portada institucional del sistema.
+
+Contenido:
+
+- Header superior con nombre del sistema, logo institucional simulado de Aduana Chile y navegación.
+- Hero principal con imagen o ilustración atingente al Paso Fronterizo Los Libertadores: cordillera, complejo fronterizo, control vehicular, ruta internacional o frontera Chile/Argentina.
+- Título: **“Control Aduanero Fronterizo Los Libertadores”**.
+- Bajada descriptiva: **“Plataforma de apoyo para registro, validación y control operativo de viajeros, vehículos y sistemas externos en frontera”**.
+- Tarjetas informativas:
+  - Paso Fronterizo Los Libertadores.
+  - Control de viajeros.
+  - Control documental.
+  - Control vehicular.
+  - Validaciones externas SAG / PDI / Aduana Limítrofe.
+- Botón principal: **“Iniciar sesión”**.
+- Botón secundario: **“Ver sistemas externos”**.
+- Sección informativa con datos del paso fronterizo:
+  - Zona primaria avanzada.
+  - Dependiente de Aduana de Los Andes.
+  - Ubicación cordillerana.
+  - Cruce internacional Chile/Argentina.
+- Footer institucional con enlaces simulados: Aduana Chile, Gobierno de Chile, Soporte, Accesibilidad.
+
+## 2. Pantalla de Login
+
+Debe representar CU-01.
+
+Contenido:
+
+- Formulario de acceso con correo y clave.
+- Selector o ayuda visual con los roles disponibles.
+- Mostrar credenciales demo en una tarjeta lateral:
+  - Operador Aduanero: `operador@aduanachile.cl / 12345`
+  - Supervisor Aduanero: `supervisor@aduanachile.cl / 12345`
+  - Administrador del Sistema: `administrador@aduanachile.cl / 12345`
+- Botón **“Ingresar”**.
+- Al iniciar sesión, el prototipo debe navegar al dashboard correspondiente según el rol.
+- Incluir mensaje de carga: **“Cargando perfil y permisos del usuario”**.
+- Incluir validación visual de error: **“Credenciales inválidas”** como estado alternativo.
+
+## 3. Dashboard Operador Aduanero
+
+Debe ser la pantalla principal del Operador Aduanero.
+
+Funciones visibles:
+
+- CU-02 Registrar / consultar expediente de viajero.
+- CU-03 Validar documentación de menor de edad.
+- CU-04 Registrar y validar vehículo motorizado.
+- CU-05 Preparar validaciones externas de control.
+- RF09 Gestionar alertas y observaciones.
+
+Diseño:
+
+- Sidebar con navegación:
+  - Inicio.
+  - Expedientes.
+  - Documentación de menor.
+  - Vehículos.
+  - Validaciones externas.
+  - Alertas.
+  - Sistemas externos.
+  - Cerrar sesión.
+- Panel superior con nombre del usuario: **“Operador Aduanero”**.
+- Tarjetas resumen:
+  - Expedientes en atención.
+  - Documentos pendientes.
+  - Vehículos por validar.
+  - Alertas abiertas.
+  - Validaciones externas pendientes.
+- Tabla de expedientes recientes con columnas:
+  - N° expediente.
+  - Nombre viajero.
+  - RUT / Pasaporte.
+  - Edad.
+  - Vehículo.
+  - Estado.
+  - Acción.
+- Botón principal: **“Nuevo expediente”**.
+
+## 4. Flujo Operador: Nuevo expediente de viajero
+
+Crear un wizard o flujo paso a paso basado en el diagrama de actividades EV2.
+
+### Paso 1: CU-02 Registrar / consultar expediente
+
+Campos:
+
+- RUT o pasaporte.
+- Nombre completo.
+- Nacionalidad.
+- Edad.
+- Motivo del viaje.
+- Dirección de destino.
+- Buscar expediente existente.
+- Crear nuevo expediente.
+
+### Paso 2: Decisión “¿Es menor de edad?”
+
+Debe haber dos botones:
+
+- Sí, es menor.
+- No, continuar.
+
+Si selecciona **“Sí, es menor”**, navegar a CU-03.
+
+### Paso 3: CU-03 Validar documentación de menor
+
+Campos:
+
+- Certificado de nacimiento.
+- Documento de identidad.
+- Autorización notarial.
+- Adulto acompañante.
+- Relación con el menor.
+- Estado documental.
+
+Debe haber decisión:
+
+- Documentación completa.
+- Falta documentación.
+
+Si falta documentación:
+
+- Abrir modal o pantalla RF09 **“Gestionar alerta”**.
+- Crear alerta: **“Falta documentación de menor de edad”**.
+- Estado del expediente: **“Observado”**.
+
+### Paso 4: Decisión “¿Viaja con vehículo?”
+
+Botones:
+
+- Sí, registrar vehículo.
+- No, preparar validaciones externas.
+
+Si selecciona **“Sí”**, navegar a CU-04.
+
+### Paso 5: CU-04 Registrar y validar vehículo motorizado
+
+Campos:
+
+- Patente.
+- Tipo de vehículo.
+- País de origen.
+- Marca.
+- Modelo.
+- Año.
+- Propietario.
+- Documentos del vehículo.
+- Permiso de circulación.
+- Seguro.
+
+Debe haber decisión:
+
+- Datos consistentes.
+- Datos inconsistentes.
+
+Si hay datos inconsistentes:
+
+- Abrir RF09 **“Gestionar alerta”**.
+- Crear alerta: **“Inconsistencia en datos del vehículo”**.
+- Estado: **“Pendiente de revisión”**.
+
+Si todo está correcto:
+
+- Asociar vehículo al expediente.
+
+### Paso 6: CU-05 Ejecutar validaciones externas de control
+
+Pantalla con tres validaciones paralelas:
+
+- Consultar SAG.
+- Consultar PDI.
+- Consultar Aduana Limítrofe Argentina.
+
+Mostrar cada integración como tarjeta con:
+
+- Estado: Pendiente / Consultando / Aprobado / Observado.
+- Fecha y hora de consulta.
+- Resultado.
+- Botón **“Simular consulta”**.
+
+Resultados posibles:
+
+- SAG: Sin observaciones.
+- PDI: Sin impedimentos.
+- Aduana Limítrofe: Información validada.
+- Error externo: generar alerta RF09.
+
+### Paso 7: RF09 Gestionar alertas y observaciones
+
+Pantalla para revisar alertas generadas durante el proceso.
+
+Columnas:
+
+- Código alerta.
+- Origen.
+- Descripción.
+- Prioridad.
+- Responsable.
+- Estado.
+- Acción.
+
+Acciones:
+
+- Revisar observación.
+- Marcar como resuelta.
+- Derivar a revisión manual.
+- Volver al expediente.
+
+Decisión:
+
+- **“¿Quedan alertas pendientes?”**
+  - Sí: mostrar botón **“Derivar a revisión manual”**.
+  - No: permitir **“Cerrar atención del expediente”**.
+
+### Paso 8: Cierre de atención
+
+Pantalla final del flujo:
+
+- Resumen del expediente.
+- Datos del viajero.
+- Documentos validados.
+- Vehículo asociado, si corresponde.
+- Resultado SAG.
+- Resultado PDI.
+- Resultado Aduana Limítrofe.
+- Alertas resueltas.
+- Estado final: **“Atención cerrada”**.
+
+Botón:
+
+- **“Volver al dashboard”**.
+
+## 5. Dashboard Supervisor Aduanero
+
+Debe representar el rol Supervisor / Administrativo.
+
+Funciones visibles:
+
+- Revisar alertas.
+- Resolver observaciones.
+- Derivar casos.
+- Consultar expedientes.
+- Generar reportes CU-06.
+
+Diseño:
+
+- Sidebar:
+  - Inicio.
+  - Alertas y observaciones.
+  - Revisión manual.
+  - Expedientes.
+  - Reportes.
+  - Sistemas externos.
+  - Cerrar sesión.
+- Tarjetas resumen:
+  - Alertas críticas.
+  - Expedientes derivados.
+  - Casos resueltos hoy.
+  - Validaciones externas con error.
+- Tabla de casos en revisión manual.
+- Pantalla de detalle de expediente observado.
+- Botones:
+  - Aprobar expediente.
+  - Solicitar antecedentes.
+  - Mantener observado.
+  - Derivar a administrador.
+
+## 6. Pantalla CU-06 Reportes operativos y estadísticos
+
+Debe estar disponible para Supervisor y Administrador.
+
+Contenido:
+
+- Filtros:
+  - Fecha desde.
+  - Fecha hasta.
+  - Tipo de control.
+  - Estado del expediente.
+  - Sistema externo consultado.
+- Gráficos o tarjetas:
+  - Expedientes procesados.
+  - Vehículos validados.
+  - Menores con documentación revisada.
+  - Alertas generadas.
+  - Alertas resueltas.
+  - Consultas SAG.
+  - Consultas PDI.
+  - Consultas Aduana Limítrofe.
+- Tabla de resultados.
+- Botones:
+  - Exportar PDF.
+  - Exportar Excel.
+  - Descargar reporte.
+- Mostrar reporte de ejemplo: **“Reporte operativo diario - Paso Los Libertadores”**.
+
+## 7. Dashboard Administrador del Sistema
+
+Debe representar el rol Administrador.
+
+Funciones visibles:
+
+- Gestión de usuarios.
+- Gestión de roles y permisos.
+- Estado de integraciones externas.
+- Auditoría del sistema.
+- Parámetros generales.
+- Acceso a reportes.
+
+Diseño:
+
+- Sidebar:
+  - Inicio.
+  - Usuarios.
+  - Roles y permisos.
+  - Integraciones externas.
+  - Auditoría.
+  - Reportes.
+  - Configuración.
+  - Cerrar sesión.
+- Tarjetas resumen:
+  - Usuarios activos.
+  - Roles configurados.
+  - Integraciones disponibles.
+  - Eventos de auditoría.
+- Tabla de usuarios:
+  - Nombre.
+  - Correo.
+  - Rol.
+  - Estado.
+  - Último acceso.
+  - Acción.
+- Pantalla de permisos por rol:
+  - Operador Aduanero: expedientes, documentos, vehículos, validaciones, alertas.
+  - Supervisor Aduanero: revisión manual, alertas, expedientes, reportes.
+  - Administrador del Sistema: usuarios, roles, integraciones, auditoría, reportes.
+- Pantalla de auditoría:
+  - Inicio de sesión.
+  - Creación de expediente.
+  - Validación documental.
+  - Consulta externa.
+  - Generación de alerta.
+  - Cierre de expediente.
+
+## 8. Pantalla Sistemas Externos
+
+Debe servir como enlace visual a los actores externos del diagrama de casos de uso.
+
+Crear una pantalla llamada **“Sistemas externos integrados”**.
+
+Debe mostrar tres tarjetas grandes:
+
+### Tarjeta 1: Sistema SAG
+
+- Ícono relacionado con control agrícola/ganadero.
+- Descripción: **“Validación sanitaria y declaración de productos regulados”**.
+- Estado: Conectado.
+- Última sincronización.
+- Botón: **“Consultar SAG”**.
+- Botón secundario: **“Ver detalle integración”**.
+
+### Tarjeta 2: Sistema PDI
+
+- Ícono relacionado con control migratorio/personas.
+- Descripción: **“Validación migratoria y control de impedimentos”**.
+- Estado: Conectado.
+- Última sincronización.
+- Botón: **“Consultar PDI”**.
+- Botón secundario: **“Ver detalle integración”**.
+
+### Tarjeta 3: Aduana Limítrofe Argentina
+
+- Ícono relacionado con frontera internacional.
+- Descripción: **“Validación coordinada con aduana extranjera”**.
+- Estado: Conectado.
+- Última sincronización.
+- Botón: **“Consultar Aduana Limítrofe”**.
+- Botón secundario: **“Ver detalle integración”**.
+
+Cada tarjeta debe navegar a una pantalla de detalle donde se muestre:
+
+- Nombre del sistema.
+- Tipo de consulta.
+- Estado de servicio.
+- Últimos resultados.
+- Ejemplo de respuesta.
+- Botón **“Volver”**.
+
+## 9. Pantalla de Alertas RF09
+
+Crear pantalla transversal para Operador y Supervisor.
+
+Debe contener:
+
+- Lista de alertas.
+- Filtros por prioridad, origen, estado y fecha.
+- Prioridades: Alta, Media, Baja.
+- Estados: Abierta, En revisión, Resuelta, Derivada.
+- Ejemplos de alertas:
+  - Falta documentación de menor de edad.
+  - Inconsistencia en datos del vehículo.
+  - Error en validación externa SAG.
+  - Observación desde PDI.
+  - Respuesta pendiente de Aduana Limítrofe.
+- Modal de detalle de alerta con:
+  - Descripción.
+  - Expediente relacionado.
+  - Responsable.
+  - Comentarios.
+  - Historial.
+  - Botones: Resolver, Derivar, Cancelar.
+
+## 10. Pantalla de Versionamiento del prototipo
+
+Crear una pantalla simple llamada **“Historial de versiones”**.
+
+Debe incluir:
+
+- Versión: 1.0
+- Fecha: actual.
+- Estado: Prototipo inicial EV3.
+- Descripción:
+  **“Primera versión navegable basada en EV2, casos de uso, diagrama de actividades y roles del sistema”.**
+- Cambios incluidos:
+  - Pantalla principal institucional.
+  - Login por roles.
+  - Dashboard Operador.
+  - Dashboard Supervisor.
+  - Dashboard Administrador.
+  - Flujo de expediente.
+  - Validación de menor de edad.
+  - Registro y validación vehicular.
+  - Validaciones externas SAG, PDI y Aduana Limítrofe.
+  - Gestión de alertas RF09.
+  - Reportes CU-06.
+- Próximas versiones:
+  - v1.1 Ajustes de usabilidad.
+  - v1.2 Ajustes según plan de pruebas ISO 25000.
+  - v2.0 Prototipo final corregido.
+
+---
+
+# Interacciones obligatorias del prototipo
+
+- Desde Home, botón **“Iniciar sesión”** navega a Login.
+- Desde Home, botón **“Ver sistemas externos”** navega a Sistemas Externos.
+- Login con operador navega a Dashboard Operador.
+- Login con supervisor navega a Dashboard Supervisor.
+- Login con administrador navega a Dashboard Administrador.
+- Dashboard Operador → Nuevo expediente → flujo paso a paso.
+- En flujo operador:
+  - Si es menor → Validar documentación.
+  - Si falta documentación → Crear alerta RF09.
+  - Si viaja con vehículo → Registrar vehículo.
+  - Si vehículo tiene inconsistencias → Crear alerta RF09.
+  - Preparar validaciones externas → Consultar SAG/PDI/Aduana Limítrofe.
+  - Si hay error externo → Crear alerta RF09.
+  - Si quedan alertas pendientes → Revisión manual.
+  - Si no quedan alertas → Cerrar expediente.
+- Dashboard Supervisor → Alertas → Detalle alerta → Resolver o derivar.
+- Dashboard Supervisor → Reportes → Generar reporte.
+- Dashboard Administrador → Usuarios → Roles y permisos.
+- Dashboard Administrador → Integraciones externas → Detalle sistema externo.
+- Todas las pantallas deben tener botón o navegación para volver al dashboard correspondiente.
+- Todas las pantallas internas deben tener opción **“Cerrar sesión”** que vuelve al Login.
+
+---
+
+# Datos de ejemplo para poblar el prototipo
+
+- Expediente: `EXP-2026-0001`.
+- Viajero: `Camila Rojas Muñoz`.
+- Documento: `Pasaporte P12345678`.
+- Edad: `17`.
+- Nacionalidad: `Chilena`.
+- Vehículo: `SUV`, patente `LLBB-22`, país de origen `Chile`.
+- Estado expediente: `En revisión`.
+- Alerta: `Falta autorización notarial`.
+- Resultado SAG: `Sin observaciones`.
+- Resultado PDI: `Sin impedimentos`.
+- Resultado Aduana Limítrofe: `Validación pendiente`.
+
+---
+
+# Requisitos de calidad visual
+
+- Usar Auto Layout en frames principales.
+- Crear componentes reutilizables:
+  - Header.
+  - Sidebar.
+  - Botón primario.
+  - Botón secundario.
+  - Tarjeta de estado.
+  - Tag de estado.
+  - Modal de alerta.
+  - Tabla de datos.
+  - Breadcrumb.
+- Usar estados visuales:
+  - Aprobado: verde.
+  - Pendiente: naranjo.
+  - Observado: rojo/secondary.
+  - En revisión: azul/primary.
+  - Deshabilitado: gris.
+- Mantener consistencia entre roles.
+- No crear una app genérica: todo debe estar contextualizado en Aduana, Paso Los Libertadores, control fronterizo, viajeros, vehículos, documentos, alertas, reportes e integraciones externas.
+- El resultado debe ser un prototipo navegable listo para presentar en EV3.

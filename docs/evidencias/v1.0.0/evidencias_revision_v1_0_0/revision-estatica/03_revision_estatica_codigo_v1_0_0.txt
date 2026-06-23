@@ -1,0 +1,50 @@
+# Evidencia revisión estática v1.0.0
+
+Proyecto revisado: Sistema de Gestión de Control Aduanero Fronterizo Los Libertadores
+Versión revisada: v1.0.0
+Fecha de generación: 2026-06-23 17:43:47
+
+## Búsquedas realizadas
+
+### Referencias visibles a versión
+src/app/components/layout/Footer.tsx:26:          Prototipo v1.0 · EV3
+src/app/components/layout/Header.tsx:30:          Prototipo v1.0
+src/app/components/pages/LoginPage.tsx:43:        <span style={{ fontSize: '11px', backgroundColor: 'rgba(255,255,255,0.2)', padding: '1px 8px', borderRadius: '4px', color: C.white }}>Prototipo v1.0</span>
+src/app/components/pages/VersionHistorial.tsx:24:  { version: 'v2.0', desc: 'Prototipo final corregido con validación completa' },
+src/app/components/pages/VersionHistorial.tsx:62:                Prototipo v1.0
+
+### Acceso a Sistemas Externos
+src/app/components/layout/Sidebar.tsx:16:  { label: 'Validaciones externas',icon: Globe,          page: 'sistemas-externos' as Page },
+src/app/components/layout/Sidebar.tsx:18:  { label: 'Sistemas externos',    icon: Shield,         page: 'sistemas-externos' as Page },
+src/app/components/layout/Sidebar.tsx:27:  { label: 'Sistemas externos',    icon: Globe,         page: 'sistemas-externos' as Page },
+src/app/components/layout/Sidebar.tsx:34:  { label: 'Integraciones externas',icon: Globe,        page: 'sistemas-externos' as Page },
+src/app/components/pages/AdminDashboard.tsx:63:              onClick={() => navigate('sistemas-externos')}
+src/app/components/pages/AdminDashboard.tsx:219:            { icon: Globe, label: 'Integraciones externas', desc: 'Estado y configuración de SAG, PDI y Aduana Limítrofe', color: C.primary, action: () => navigate('sistemas-externos') },
+src/app/components/pages/HomePage.tsx:62:              onClick={() => navigate('sistemas-externos')}
+src/app/components/pages/OperadorDashboard.tsx:129:            { label: 'Validaciones externas pendientes', desc: 'SAG · PDI · Aduana Limítrofe', action: () => navigate('sistemas-externos'), color: C.primary },
+src/app/components/pages/SistemasExternos.tsx:80:        activePage="sistemas-externos"
+src/app/components/pages/SistemasExternos.tsx:157:      activePage="sistemas-externos"
+src/app/components/pages/SupervisorDashboard.tsx:165:            onClick={() => navigate('sistemas-externos')}
+src/app/components/types.ts:9:  | 'sistemas-externos'
+
+### Sidebar por rol
+12:const OPERADOR_ITEMS = [
+21:const SUPERVISOR_ITEMS = [
+30:const ADMIN_ITEMS = [
+40:export function Sidebar({ navigate, currentUser, logout, active }: SidebarProps) {
+42:    currentUser?.role === 'operador' ? OPERADOR_ITEMS :
+43:    currentUser?.role === 'supervisor' ? SUPERVISOR_ITEMS :
+44:    ADMIN_ITEMS;
+
+### Validaciones aleatorias
+src/app/components/ui/sidebar.tsx:611:    return `${Math.floor(Math.random() * 40) + 50}%`;
+src/app/components/pages/NuevoExpediente.tsx:48:      const result = Math.random() > 0.15 ? 'aprobado' : 'error';
+
+### Botones de reportes / exportación
+57:              <Download size={15} /> Exportar PDF
+60:              <Download size={15} /> Exportar Excel
+63:              <FileText size={15} /> Descargar reporte
+92:            Aplicar filtros
+
+### Buscar expediente existente
+142:                  Buscar expediente existente
