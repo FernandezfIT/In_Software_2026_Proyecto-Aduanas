@@ -1,0 +1,31 @@
+# Evidencia — estructura de archivos v2.0.0
+
+Cantidad de archivos dentro de `src`: 77
+
+Listado de archivos detectados:
+
+```text
+ATTRIBUTIONS.md
+README.md
+default_shadcn_theme.css
+guidelines/Guidelines.md
+index.html
+package.json
+pnpm-workspace.yaml
+postcss.config.mjs
+src/app/App.tsx
+src/app/components/types.ts
+src/imports/pasted_text/aduana-los-libertadores-protot.txt
+src/imports/pasted_text/aduana-los-libertadores-v1-1.md
+src/imports/pasted_text/gestion-aduanera-prototipo-v1--1.md
+src/imports/pasted_text/gestion-aduanera-prototipo-v1-.md
+src/imports/pasted_text/gestion-aduanera-v1-1.md
+src/main.tsx
+src/styles/fonts.css
+src/styles/globals.css
+src/styles/index.css
+src/styles/tailwind.css
+src/styles/theme.css
+vite.config.ts
+
+```

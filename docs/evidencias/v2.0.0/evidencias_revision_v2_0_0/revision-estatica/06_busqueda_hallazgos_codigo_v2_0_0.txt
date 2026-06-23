@@ -1,0 +1,36 @@
+# Evidencia — búsqueda de hallazgos en código v2.0.0
+
+Comando usado:
+
+```bash
+grep -RIn "Prototipo v1.0\|Math.random\|navigate('sistemas-externos'\|ADMIN_ITEMS\|currentUser?.role" src/app src/main.tsx src/styles README.md package.json
+```
+
+Resultado:
+
+```text
+src/app/components/ui/sidebar.tsx:611:    return `${Math.floor(Math.random() * 40) + 50}%`;
+src/app/components/layout/Footer.tsx:26:          Prototipo v1.0 · EV3
+src/app/components/layout/Header.tsx:30:          Prototipo v1.0
+src/app/components/layout/Sidebar.tsx:30:const ADMIN_ITEMS = [
+src/app/components/layout/Sidebar.tsx:42:    currentUser?.role === 'operador' ? OPERADOR_ITEMS :
+src/app/components/layout/Sidebar.tsx:43:    currentUser?.role === 'supervisor' ? SUPERVISOR_ITEMS :
+src/app/components/layout/Sidebar.tsx:44:    ADMIN_ITEMS;
+src/app/components/pages/AdminDashboard.tsx:63:              onClick={() => navigate('sistemas-externos')}
+src/app/components/pages/AdminDashboard.tsx:219:            { icon: Globe, label: 'Integraciones externas', desc: 'Estado y configuración de SAG, PDI y Aduana Limítrofe', color: C.primary, action: () => navigate('sistemas-externos') },
+src/app/components/pages/HomePage.tsx:62:              onClick={() => navigate('sistemas-externos')}
+src/app/components/pages/LoginPage.tsx:43:        <span style={{ fontSize: '11px', backgroundColor: 'rgba(255,255,255,0.2)', padding: '1px 8px', borderRadius: '4px', color: C.white }}>Prototipo v1.0</span>
+src/app/components/pages/NuevoExpediente.tsx:48:      const result = Math.random() > 0.15 ? 'aprobado' : 'error';
+src/app/components/pages/OperadorDashboard.tsx:129:            { label: 'Validaciones externas pendientes', desc: 'SAG · PDI · Aduana Limítrofe', action: () => navigate('sistemas-externos'), color: C.primary },
+src/app/components/pages/Reportes.tsx:42:  const backPage = currentUser?.role === 'supervisor' ? 'supervisor-dashboard' : 'admin-dashboard';
+src/app/components/pages/SupervisorDashboard.tsx:165:            onClick={() => navigate('sistemas-externos')}
+src/app/components/pages/VersionHistorial.tsx:62:                Prototipo v1.0
+
+```
+
+Interpretación:
+
+- Persisten textos visibles de `Prototipo v1.0`.
+- Persisten validaciones aleatorias con `Math.random`.
+- Home permite navegar a `sistemas-externos`.
+- Sidebar mantiene una lógica que puede cargar `ADMIN_ITEMS` cuando no hay usuario operador ni supervisor.

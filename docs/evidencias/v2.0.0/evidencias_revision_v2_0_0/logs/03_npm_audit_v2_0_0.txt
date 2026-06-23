@@ -1,0 +1,27 @@
+# Evidencia — npm audit v2.0.0
+
+Comando evaluado:
+
+npm audit
+
+Resultado de revisión documentado:
+
+- Estado: observado.
+- Se detectaron 2 vulnerabilidades altas.
+- Dependencias asociadas:
+  - react-router
+  - vite
+
+Recomendación:
+
+Actualizar dependencias a versiones corregidas y volver a ejecutar:
+
+npm install
+npm run build
+npm audit
+
+No usar `npm audit fix --force` sin probar posteriormente, porque puede modificar dependencias de forma agresiva y romper el prototipo.
+
+Para evidencia terminal directa del equipo local, ejecutar:
+
+npm audit > docs/evidencias/v2.0.0/logs/03_npm_audit_v2_0_0_local.txt 2>&1

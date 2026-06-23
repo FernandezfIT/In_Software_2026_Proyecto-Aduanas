@@ -1,0 +1,17 @@
+# Evidencia — npm install v2.0.0
+
+Comando evaluado:
+
+npm install
+
+Resultado de revisión documentado:
+
+- Instalación de dependencias: correcta.
+- Se instalaron las dependencias necesarias para ejecutar el prototipo.
+- Posterior a la instalación, npm audit reportó vulnerabilidades altas.
+
+Observación:
+
+Este archivo funciona como registro documental de la revisión técnica realizada sobre la versión v2.0.0. Para evidencia terminal directa del equipo local, ejecutar:
+
+npm install > docs/evidencias/v2.0.0/logs/01_npm_install_v2_0_0_local.txt 2>&1

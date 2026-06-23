@@ -1,0 +1,26 @@
+# Evidencia — archivos faltantes o no incluidos en ZIP v2.0.0
+
+Comando usado:
+
+```bash
+ls -la .gitignore package-lock.json dist node_modules
+```
+
+Resultado:
+
+```text
+ls: cannot access '.gitignore': No such file or directory
+ls: cannot access 'package-lock.json': No such file or directory
+ls: cannot access 'dist': No such file or directory
+ls: cannot access 'node_modules': No such file or directory
+
+```
+
+Interpretación:
+
+- No se incluye `.gitignore` en el ZIP recibido.
+- No se incluye `package-lock.json`.
+- No se incluye `dist`, lo cual es correcto si no se publica build.
+- No se incluye `node_modules`, lo cual es correcto para un ZIP de código fuente.
+
+Para el repositorio GitHub se recomienda agregar `.gitignore` y generar `package-lock.json` después de ejecutar `npm install`.
