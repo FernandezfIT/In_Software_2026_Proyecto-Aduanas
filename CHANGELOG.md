@@ -1,23 +1,17 @@
-## [v2.0.0] - Versión revisada con observaciones
+## [v2.0.1] - Versión correctiva
 
-### Incluido
-- Actualización del prototipo desde Figma.
-- Pantallas principales del sistema aduanero.
-- Login por roles.
-- Dashboards para Operador, Supervisor y Administrador.
-- Flujo de expediente, alertas, reportes y sistemas externos.
+### Corregido
+- Se actualiza la versión visible del prototipo a v2.0.1.
+- Se corrige acceso a Sistemas Externos sin sesión iniciada.
+- Se corrige comportamiento de Sidebar cuando no existe usuario activo.
+- Se refuerza navegación según rol: Operador, Supervisor y Administrador.
+- Se agrega feedback visual a botones de reportes, filtros y exportación.
+- Se mejora la gestión visual de alertas RF09.
+- Se mejora la pantalla de historial de versiones.
+- Se mejora la información visible del prototipo.
+- Se realizan ajustes de accesibilidad básica en modales, botones y formularios.
 
 ### Evaluación
-- Versión revisada mediante plan de pruebas basado en ISO/IEC 25010.
-- El proyecto compila correctamente.
-- Se detectan observaciones funcionales, de navegación, accesibilidad, seguridad básica y versionamiento.
-
-### Observaciones pendientes
-- Corregir referencias visibles a versiones anteriores.
-- Bloquear acceso a sistemas externos sin sesión.
-- Corregir comportamiento del sidebar sin usuario activo.
-- Agregar feedback a botones sin acción.
-- Eliminar validaciones aleatorias.
-- Mejorar accesibilidad de modales.
-- Mejorar documentación del proyecto.
-- Corregir vulnerabilidades reportadas por npm audit.
+- Versión generada a partir de los hallazgos detectados en v2.0.0.
+- Pendiente revisión final con plan ISO/IEC 25010.
+- Pendiente generación de evidencias finales.
